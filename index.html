@@ -9,6 +9,38 @@
 </head>
 
 <body>
+  <!-- Modal -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Entre na sua Conta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">              
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <small class="form-text text-muted">Esqueceu sua senha? <a href="#">Clique Aqui</a>.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL END -->
+
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
     <a href="index.html" class="navbar-brand">
       <img src="img/caravan.svg" alt="Caravan Logo">
@@ -24,9 +56,9 @@
           <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Locais</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a href="locais.html" class="dropdown-item">Budapeste</a>
-            <a href="locais.html" class="dropdown-item">Cairo</a>
-            <a href="locais.html" class="dropdown-item">Seul</a>
+            <a href="local.html" class="dropdown-item">Budapeste</a>
+            <a href="local.html" class="dropdown-item">Cairo</a>
+            <a href="local.html" class="dropdown-item">Seul</a>
           </div>
         </li>
         <li class="nav-item">
@@ -36,7 +68,7 @@
           <a href="#" class="nav-link">Contato</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Login</a>
+          <a href="#" class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
         </li>
         <li class="nav-item">
           <a href="#" class="btn btn btn-outline-primary ml-md-2">Increva-se</a>
@@ -166,8 +198,9 @@
 
   <section id="home-quote" class="p-md-5">
     <blockquote class="blockquote text-white text-center p-md-5 p-3">
-     <p class="display-4"><em> "A felicidade não está na estrada que leva a algum lugar. A felicade é a própria estrada.</em></p>
-     <footer class="blockquote-footer text-white">Bob Dylan</footer>
+      <p class="display-4"><em> "A felicidade não está na estrada que leva a algum lugar. A felicade é a própria
+          estrada.</em></p>
+      <footer class="blockquote-footer text-white">Bob Dylan</footer>
     </blockquote>
   </section>
 
@@ -178,12 +211,15 @@
     </div>
 
     <div class="row justify-content-center">
-      <div class="col-6" id="faq" data-children=".pergunta">
-        
+      <div class="col-md-6" id="faq" data-children=".pergunta">
+
         <div class="pergunta py-2">
-          <a href="#pergunta1" class="lead" data-toggle="collapse" >- É possível cancelar a viagem?</a>
+          <a href="#pergunta1" class="lead" data-toggle="collapse">- É possível cancelar a viagem?</a>
           <div id="pergunta1" class="collapse show" data-parent="#pergunta1" role="tabpanel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus assumenda.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo
+              dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero
+              repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus
+              assumenda.</p>
           </div>
         </div>
 
@@ -192,16 +228,22 @@
         <div class="pergunta py-2">
           <a href="#pergunta2" class="lead" data-toggle="collapse">- Qual a garantia que tenho se perder o voo?</a>
           <div id="pergunta2" class="collapse" data-parent="#pergunta2" role="tabpanel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus assumenda.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo
+              dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero
+              repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus
+              assumenda.</p>
           </div>
         </div>
-        
+
         <div class="dropdown-divider"></div>
 
         <div class="pergunta py-2">
           <a href="#pergunta3" class="lead" data-toggle="collapse">- Qual a principal forma de viagem?</a>
           <div id="pergunta3" class="collapse" data-parent="#pergunta3" role="tabpanel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus assumenda.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo
+              dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero
+              repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus
+              assumenda.</p>
           </div>
         </div>
 
@@ -210,7 +252,10 @@
         <div class="pergunta py-2">
           <a href="#pergunta4" class="lead" data-toggle="collapse">- Qual o melhor destino de viagem?</a>
           <div id="pergunta4" class="collapse" data-parent="#pergunta4" role="tabpanel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus assumenda.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo
+              dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero
+              repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus
+              assumenda.</p>
           </div>
         </div>
 
@@ -219,7 +264,10 @@
         <div class="pergunta py-2">
           <a href="#pergunta5" class="lead" data-toggle="collapse">- Vocês dão descontos para grupos grandes?</a>
           <div id="pergunta5" class="collapse" data-parent="#pergunta5" role="tabpanel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus assumenda.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias debitis non temporibus dolores explicabo
+              dolorum nam deleniti excepturi unde possimus necessitatibus beatae, magnam voluptatibus quos libero
+              repudiandae eaque suscipit saepe ex consectetur commodi quidem inventore facere. Autem accusamus ducimus
+              assumenda.</p>
           </div>
         </div>
         <div class="dropdown-divider"></div>
@@ -232,6 +280,55 @@
       <a href="contato.html" class="btn btn-primary btn-lg">Entre em Contato</a>
     </div>
   </section>
+
+  <footer class="bg-dark text-white">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PÁGINAS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Inscreva-se</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <h4 class="h6">LOCAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">California</a></li>
+            <li><a href="#">Dublin</a></li>
+            <li><a href="#">Paris</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-6">
+          <h4 class="h6">DADOS DE CONTATO</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>contato@caravan.com.br</li>
+            <li>55 13 92222-2222</li>
+            <li>Seg. à Sex. das 9h às 18h</li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 col-6">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="#" class="btn btn-outline-secondary btn-sm btn-block mb-2"
+                style="max-width: 140px;">Facebook</a></li>
+            <li><a href="#" class="btn btn-outline-secondary btn-sm btn-block mb-2"
+                style="max-width: 140px;">LinkedIn</a></li>
+            <li><a href="#" class="btn btn-outline-secondary btn-sm btn-block mb-2" style="max-width: 140px;">Github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-primary text-center py-3">
+      <p class="mb-0">Caravan 2020. Reproduzido por Leonardo Dantas</p>
+    </div>
+  </footer>
 
 
   <script type="text/javascript" src="js/jquery-3.5.1.slim.min.js"></script>
